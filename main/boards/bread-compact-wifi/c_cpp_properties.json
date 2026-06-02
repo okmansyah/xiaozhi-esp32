@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "ESP-IDF",
+            "compilerPath": "${config:idf.xtensaElfLibcPath}",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "includePath": [
+                "${config:idf.espIdfPath}/components/**",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/build/config"
+            ],
+            "configurationProvider": "espressif.esp-idf-extension"
+        }
+    ],
+    "version": 4
+}

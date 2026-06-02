@@ -1,3 +1,10 @@
+#include <string>
+
+#include <esp_log.h>
+#include <driver/i2c_master.h>
+#include <esp_lcd_panel_ops.h>
+#include <esp_lcd_panel_vendor.h>
+
 #include "wifi_board.h"
 #include "codecs/no_audio_codec.h"
 #include "display/oled_display.h"
@@ -9,11 +16,6 @@
 #include "lamp_controller.h"
 #include "led/single_led.h"
 #include "assets/lang_config.h"
-
-#include <esp_log.h>
-#include <driver/i2c_master.h>
-#include <esp_lcd_panel_ops.h>
-#include <esp_lcd_panel_vendor.h>
 
 #ifdef SH1106
 #include <esp_lcd_panel_sh1106.h>
@@ -34,7 +36,7 @@ private:
 
     void InitializeDisplayI2c() {
         i2c_master_bus_config_t bus_config = {
-            .i2c_port = (i2c_port_t)0,
+            .i2c_port = I2C_NUM_0,
             .sda_io_num = DISPLAY_SDA_PIN,
             .scl_io_num = DISPLAY_SCL_PIN,
             .clk_source = I2C_CLK_SRC_DEFAULT,

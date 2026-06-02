@@ -1,0 +1,12 @@
+{
+    "C_Cpp.default.configurationProvider": "espressif.esp-idf-extension",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.intelliSenseEngine": "default",
+    "files.associations": {
+        "*.h": "cpp",
+        "*.cc": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
+    }
+}
